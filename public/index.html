@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Image upload</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <nav>
+        <a id="home-link" href="#images">HOME</a>
+        <a href="#upload">UPLOAD</a>
+    </nav>
+    <div id="modal">
+
+    </div>
+    <div id="home"><main id="main"></main></div>
+
+
+
+    <template id="home">
+
+        {{#name}}
+            <a class="card-link" href="#image/{{id}}">
+                <div class="card">
+                <img class="card-img" src="{{url}}" alt="">
+                <h2>{{title}}</h1>
+                <h3>{{username}}</h2>
+                <h4>{{description}}</h4>
+                </div>
+            </a>
+        {{/name}}
+    </template>
+
+    <template id="image">
+        <div class="x-button"></div>
+        <div class="single-card">
+            <div class="left-side">
+                <input id="image-user-input" type="text" placeholder="User">
+                <input id="image-comment-input" type="text" placeholder="Comment">
+                <div class="submit-comment"><h2>Post</h2></div>
+                <div class="comment-box">
+                    {{#comments}}
+                    <h2 class="commentname">{{username}}</h3>
+                    <h3 class="comment">{{comment}}</h2>
+                    {{/comments}}
+                </div>
+            </div>
+            <div class="right-side">
+                {{#name}}
+                <img class="single-img" src="{{url}}" alt="">
+                <h3>{{title}}</h1>
+                <h4>{{username}}</h2>
+                <h4 class="description">{{description}}</h4>
+                {{/name}}
+            </div>
+
+        </div>
+    </template>
+
+    <template id="upload">
+        <div class="x-button"></div>
+        <div class="submit-card">
+            <img id="preview-image" src="#" alt="" onchange="readURL(this)">
+            <input type="file" id="file-selector" value="file" />
+            <label for="file-selector">Upload file</label>
+            <!-- <input type="file" value="file"> -->
+            <input id="user-input" placeholder="User">
+            <input id="title-input" placeholder="Restaurant">
+            <input id="description-input" type="text" placeholder="Description">
+            <div class="submit-image"><h2>Post</h2></div>
+        </div>
+    </template>
+
+    <script src="/js/jquery-3.1.1.min.js"></script>
+    <script src="/js/handlebars.min.js"></script>
+    <script src="/js/underscore-min.js"></script>
+    <script src="/js/backbone-min.js"></script>
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

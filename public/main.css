@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-weight: bold;
+    letter-spacing: .3;
+    outline: none;
+
+}
+
+body {
+    height:100%;
+}
+
+
+h3 {
+    font-weight: lighter;
+    /*font-style: italic;*/
+    font-size: .9em;
+    margin-bottom: .5em;
+}
+
+h4 {
+    font-size: 1em;
+
+}
+
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1.5em 0 0 3em;
+
+}
+#modal {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+
+    width: 100vw;
+    top:6vw;
+    display: none;
+    background-color: rgba(0,0,0,.9);
+    z-index: 5;
+
+}
+
+.x-button {
+    position: fixed;
+    top: 7vw;
+    right: 2vw;
+    align-self: flex-start;
+    width: 20px;
+    height:20px;
+    margin: 10px 0 0 10px;
+    background: url("/x.svg");
+    background-size: contain;
+    transition: opacity .2s;
+}
+.x-button:hover {
+    opacity: .7;
+    transition: opacity .2s;
+}
+
+#home {
+    top:6vw;
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    z-index: 1;
+}
+.card{
+    width: 20vw;
+    height:20vw;
+    margin: 0 4vw 5vw 0;
+
+}
+
+.single-card {
+    margin:6vw 4vw 4vw 4vw;
+    margin-top: 10vh;
+    display: flex;
+    align-items: stretch;
+    color: white;
+    height:90vw;
+    width: 92vw;
+}
+.submit-card {
+    margin:10vh 0 0 0;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    height:90vw;
+    max-width: 500px;
+}
+.submit-card input {
+    outline: none;
+    background: transparent;
+    padding-top: 3em;
+    border: white solid;
+    border-width: 0 0 2px 0;
+    font-size: 1em;
+    color: white;
+}
+label {
+    display: inline-block;
+    color:white;
+    font-size: 1.3em;
+    border: white solid;
+    border-width: 0 0 2px 0;
+    cursor: pointer;
+}
+#file-selector {
+    visibility: hidden;
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+#preview-image {
+    display: none;
+}
+.submit-image, .submit-comment{
+    width: 50%;
+    margin: 1em 0 1em 0;
+    border: white solid 2px;
+    color: white;
+    font-size: .9em;
+    height:2em;
+    cursor: pointer;
+    text-align: center;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: white;
+  font-size: 1.3em;
+}
+.left-side {
+    width:40%;
+    height: 100%;
+}
+#image-user-input {
+    font-size: 1.3em;
+    width: 50%;
+    margin: 0 0 1em 0;
+    border: white solid;
+    border-width: 0 0 3px 0;
+    color: white;
+    height:2em;
+}
+#image-comment-input {
+    font-size: 1.3em;
+    width: 50%;
+    margin: 1em 0 1em 0;
+    border: white solid;
+    border-width: 0 0 3px 0;
+    color: white;
+    font-weight: normal;
+}
+.comment-box {
+    height:50vh;
+    overflow: auto;
+}
+.comment {
+    margin-bottom: 1em;
+    width:70%;
+}
+.left-side input {
+    width:100%;
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+
+}
+
+.single-img {
+    max-width: 40vw;
+    text-align: center;
+    align-self: center;
+
+}
+
+.card-img {
+opacity: 1;
+width:100%;
+height: 70%;
+object-fit: cover;
+transition: opacity .1s;
+}
+
+
+nav {
+    background-color: black;
+    padding-top: 2vw;
+    height: 4vw;
+    width: 100%;
+    position: fixed;
+    top:0;
+    z-index: 10;
+}
+
+nav a{
+    color: white;
+    padding: 1vw;
+    margin-left: 3vw;
+    text-decoration: none;
+}
+
+input:focus::-webkit-input-placeholder {
+    color:transparent;
+ }
+
+ .submit-comment {
+     margin-bottom: 2em;
+ }
+
+
+@media only screen
+  and (max-width: 1200px){
+      .card{
+          width: 40vw;
+          height:40vw;
+          margin: 0 4vw 5vw 0;
+
+      }
+
+}
+
+@media only screen
+  and (max-width: 650px){
+      #main {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+      }
+      nav {
+          text-align: center;
+          height: 10vw;
+      }
+      .card{
+          width: 60vw;
+          height:60vw;
+          margin: 0 4vw 5vw 0;
+
+      }
+
+}
+
+@media only screen
+  and (max-width: 460px){
+      #main {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+      }
+      nav {
+          text-align: center;
+          height: 10vw;
+      }
+      .card{
+          width: 60vw;
+          height:60vw;
+          margin: 0 4vw 10vw 0;
+
+      }
+
+}

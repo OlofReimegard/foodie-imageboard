@@ -1,0 +1,42 @@
+bodyparser
+
+bordyparses.urlencoded
+bodyparser.json.
+
+
+app.get("/users", function(req,res) {
+    res.json ({
+    id:5, <--- magic property
+
+    })
+})
+
+
+var usersModel = Backbone.Model.extend({
+initialize: function() {
+
+}
+save: function() {
+
+}
+
+url: function() {
+
+}
+})
+
+var usersView = Backbone.Model.extend({
+initialize: function() {
+    var view = this
+}
+save: function() {
+
+}
+mousedownfunc : function (e) <----- to target element
+events: {
+"mousedown li" : "mousedownfunc"
+}
+})
+
+
+get backbone model for getting images, view for displaying images
